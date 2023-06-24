@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Platform - Blog Detail</title>
+</head>
+<body>
+    <h1>{{ blog_post.title }}</h1>
+    <p>{{ blog_post.content }}</p>
+    <p>Author: {{ blog_post.author.username }}</p>
+    <a href="{% url 'update_blog' blog_post.pk %}">Edit</a>
+    <a href="{% url 'delete_blog' blog_post.pk %}">Delete</a>
+    <a href="{% url 'blog_list' %}">Back to List</a>
+</body>
+</html>
